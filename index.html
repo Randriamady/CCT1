@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>SIPROMAD</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="logo">SIPROMAD</div>
+  <nav>
+    <button onclick="showSection('caisse')">Insertion Caisse</button>
+    <button onclick="showSection('cct1')">Insertion CCT1</button>
+  </nav>
+</aside>
+
+<main>
+  <header>
+    <div class="top-left"><img src="logo.png" height="40"></div>
+    <div class="top-right">
+      <button>Connexion</button>
+      <button>S'inscrire</button>
+    </div>
+  </header>
+
+  <section id="caisse" class="content-section">
+    <h2>Insertion Caisse</h2>
+    <form method="post" action="">
+      <input type="hidden" name="action" value="addCaisse">
+      <input type="date" name="DATE" required>
+      <input type="text" name="SOCIETE" placeholder="SOCIETE" required>
+      <input type="text" name="DEPARTEMENT" placeholder="DEPARTEMENT">
+      <input type="text" name="DR/DA" placeholder="DR/DA">
+      <select name="MODE DE PAIEMENT">
+        <option value="chèque">Chèque</option>
+        <option value="espece">Espèce</option>
+        <option value="virement">Virement</option>
+      </select>
+      <input type="date" name="ECHEANCHE BANQUE" placeholder="ECHEANCE BANQUE">
+      <input type="date" name="DATE DE VERSEMENT" placeholder="DATE DE VERSEMENT">
+      <input type="text" name="BQ VERSEMENT" placeholder="BQ VERSEMENT">
+      <input type="text" name="CLIENT" placeholder="CLIENT">
+      <input type="text" name="CODE CLIENT" placeholder="CODE CLIENT">
+      <input type="text" name="FACTURE" placeholder="FACTURE">
+      <input type="text" name="LIBELLE" placeholder="LIBELLE">
+      <input type="number" name="ENCAISSEMENT" placeholder="ENCAISSEMENT">
+      <input type="number" name="DECAISSMENT" placeholder="DECAISSMENT">
+      <input type="number" name="MONTANT" placeholder="MONTANT">
+      <textarea name="OBSERVATION" placeholder="OBSERVATION"></textarea>
+      <button type="submit">Ajouter</button>
+    </form>
+  </section>
+
+  <section id="cct1" class="content-section">
+    <h2>Insertion CCT1</h2>
+    <form method="post" action="">
+      <input type="hidden" name="action" value="addCCT1">
+      <input type="date" name="DATE" required>
+      <input type="text" name="N°RV" placeholder="N°RV">
+      <input type="text" name="DR-DA" placeholder="DR-DA">
+      <input type="text" name="LIBELLE" placeholder="LIBELLE">
+      <input type="number" name="RECETTE" placeholder="RECETTE">
+      <input type="number" name="DEPENSE" placeholder="DEPENSE">
+      <input type="number" name="SOLDE" placeholder="SOLDE">
+      <input type="text" name="SOCIETES" placeholder="SOCIETES">
+      <textarea name="COMMENTAIRES" placeholder="COMMENTAIRES"></textarea>
+      <button type="submit">Ajouter</button>
+    </form>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
